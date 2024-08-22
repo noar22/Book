@@ -1,0 +1,45 @@
+!<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book note</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amaranth&family=KoHo:wght@500&family=Merriweather&family=Montserrat&family=Parisienne&family=Sacramento&family=Ubuntu&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1> my books:</h1>
+    <p>
+      this is where i am going to write about any of the books i have read.
+      you can sort it by rate, or by name.
+      hope you have fun!
+      noa
+    </p>
+    <form action="/sort" method="post">
+        <input type="submit" name="sort" value="rate" id="rate1">
+        <input type="submit" name="sort" value="writer" id="rate">
+        <input type="submit" name="sort" value="name" id="rate">
+          <input type="submit" name="add" value="new" id="tab">
+          <label for="tab">add new book</label>
+
+    </form>
+    <% for (i=0; i< book.length; i++ ) { %>
+    <h1> <%= book[i].name %></h1>
+    <h2><%=book[i].writer%> </h2>
+    <p> <%=book[i].rating %>
+    </p>
+    <p>
+      <%=book[i].summary%>
+    </p>
+    <form action="/add" method="post">
+      <button type="submit" name="button" value="<%= book[i].name %>"style="background-color: blue">read review</button>
+    </form>
+    <form action="/delete" method="post">
+      <button type="submit" name="button2" value="<%= book[i].name %>"style="background-color: blue">delete book</button>
+    </form>
+
+    <%} %>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= book[0].name %></title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amaranth&family=KoHo:wght@500&family=Merriweather&family=Montserrat&family=Parisienne&family=Sacramento&family=Ubuntu&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <h1><%= book[0].name %></h1>
+  <p>
+    isbn: <%=book[0].isbn %>
+  </p>
+  <p>
+    how strongly i recommend it: <%=book[0].rating  %> /10
+  </p>
+  <p>
+    review:
+    <%=book[0].summary%>
+  </p>
+  <p>
+    my notes:
+    <%=book[0].review%>
+  </p>
+</body>
+
+</html>
